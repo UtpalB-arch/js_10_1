@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+            var count = 0;
+            function cc(card){
+                switch(card){
+                    case 2:
+                    case 3:
+                    case 4:
+                    case 5:
+                    case 6:
+                        count += 1;
+                        break;
+                    case 7:
+                    case 8:
+                    case 9:                        
+                        break; 
+                    case 10:
+                    case 'J':
+                    case 'Q':
+                    case 'K':
+                    case 'A':
+                        count += -1;
+                        break;
+                }
+                if(count <= 0){
+                    var resultd = "";
+                    resultd = count + ' Hold';
+                    return resultd;
+                }else{
+                    var resultf = '';
+                    resultf = count + ' Bet';
+                    return resultf;
+                }
+                return count;
+            }
+            console.log(cc(2)); console.log(cc(3)); console.log(cc(7)); console.log(cc('K')); console.log(cc('A'));
+            console.log(cc(2)); console.log(cc(3)); console.log(cc(4)); console.log(cc(5)); console.log(cc(6));
+        </script>
+    </body>
+</html>
